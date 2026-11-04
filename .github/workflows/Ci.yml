@@ -1,0 +1,26 @@
+name: ML CI pipeline
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  train-and-test:
+    runs-on: ubuntu-latest   
+    steps:
+      - name: Download project code
+        uses: actions/checkout@v4
+
+      - name: setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install libraries
+        run: pip install -r requirement.txt
+
+      - name: train Ml model
+        run: python train.py
+
+      - name: test Ml model
+        run: python test.py
