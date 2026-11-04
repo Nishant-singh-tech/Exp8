@@ -24,3 +24,10 @@ jobs:
 
       - name: test Ml model
         run: python test.py
+
+#after deployment uncomment
+      # - name: Deplotment
+      #   if: success() && github.ref == 'refs/heads/main'
+      #   env:
+      #     DEPLOY_HOOK_UP:${{secrets.RENDER_DEPLOY_HOOK_URL}}
+      #   run: curl --fail --silent --show-error "$DEPLOY_HOOK_URL"

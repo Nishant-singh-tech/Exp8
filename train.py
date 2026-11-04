@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 import joblib
 
 
-df = pd.read_csv("Data\Iris.csv.csv")
+# df = pd.read_csv("Data\Iris.csv.csv")
 df = pd.read_csv("Data/Iris.csv.csv")
 
 df = df.drop("Id", axis=1)
