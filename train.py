@@ -5,7 +5,11 @@ from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
 import joblib
 
+<<<<<<< HEAD
 df = pd.read_csv("Data\Iris.csv.csv")
+=======
+df = pd.read_csv("Data/Iris.csv.csv")
+>>>>>>> b706f59bfa35a1e15d6f58faf159656262809bf4
 df = df.drop("Id", axis=1)
 
 X = df.drop("Species", axis=1)
