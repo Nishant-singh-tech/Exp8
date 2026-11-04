@@ -2,14 +2,14 @@ name: ML CI pipeline
 on:
   push:
     branches: [main]
-  workflow_dispach:
+  workflow_dispatch:
 
 jobs:
   train-and-test:
     runs-on: ubuntu-latest   
     steps:
       - name: Download project code
-        uses: action/checkout/@v4
+        uses: actions/checkout@v4
 
       - name: setup Python
         uses: actions/setup-python@v5
