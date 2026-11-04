@@ -2,8 +2,5 @@ pandas
 scikit-learn
 joblib
 gunicorn
-<<<<<<< HEAD
 flask
 pytest
-=======
->>>>>>> b706f59bfa35a1e15d6f58faf159656262809bf4
