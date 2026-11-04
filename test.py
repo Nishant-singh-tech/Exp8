@@ -7,7 +7,7 @@ import joblib
 from sklearn.metrics import accuracy_score
 
 model = joblib.load("model.pkl")
-test_df=pd.read_csv("Data\Iris.csv.csv")
+test_df=pd.read_csv("Data/Iris.csv.csv")
 test_df=test_df.drop("Id",axis=1)
 X=test_df.drop("Species",axis=1)
 Y = test_df["Species"]
